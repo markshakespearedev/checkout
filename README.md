@@ -29,9 +29,9 @@
 
 ## Performance and Metrics
 
--   TODO: adds lighthouse metrics?
--   TODO: look at react dev tools render performance
--   TODO: look at other possible useful metrics
+- Google Lighthouse audit has positive results...
+
+![Google Metrics](./docs/audit.png)
 
 ## Browser Support
 

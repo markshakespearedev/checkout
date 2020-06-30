@@ -17,6 +17,7 @@
 
 ## About the Project
 
+- [Live project here](https://priceless-galileo-964532.netlify.app)
 -   Mobile first - styles are written mobile first. Any changes in layout for larger screens are done using media query
     min-width.
 

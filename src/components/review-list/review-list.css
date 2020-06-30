@@ -1,0 +1,28 @@
+.reviewsContainer {
+    margin-top: 10%;
+}
+
+.latestReviews {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewHeading {
+    font-size: 1.7rem;
+}
+
+.reviewItem {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.reviewItem > *:first-child {
+    flex-basis: 20%;
+}
+
+.reviewItem > *:nth-child(2) {
+    flex-basis: 80%;
+}

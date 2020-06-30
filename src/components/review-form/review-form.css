@@ -1,0 +1,73 @@
+:root {
+    --color-disabled-grey: rgb(220, 223, 226);
+    --color-green: rgb(42, 157, 143);
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    margin-top: 1rem;
+}
+
+.form > div,
+.form > button {
+    margin: 1rem 0;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 0.5rem 0.3rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    font-size: 1rem;
+    resize: none;
+}
+
+.formErrors {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.button {
+    width: 140px;
+    border: 1px solid var(--color-green);
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: var(--color-green);
+    color: white;
+    font-size: 1rem;
+}
+
+.button:disabled {
+    background-color: var(--color-disabled-grey);
+    border-color: var(--color-disabled-grey);
+    color: grey;
+}
+
+.button:hover:enabled {
+    cursor: pointer;
+}
+
+.activeRating {
+    color: gold;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.error {
+    color: red;
+    margin-left: 0.5rem;
+}

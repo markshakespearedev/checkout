@@ -1,0 +1,37 @@
+[
+    {
+        "id": "88eadf7c-1b95-4296-8cbc-81700b14b894",
+        "text": "The cakes are amazing!",
+        "rating": 5,
+        "userName": "Bob",
+        "createdAt": 1593526444030
+    },
+    {
+        "id": "45515446-284a-4d8b-837d-25dcce5fea5e",
+        "text": "Not bad but i've had better",
+        "userName": "Joe",
+        "rating": 3,
+        "createdAt": 1593526966190
+    },
+    {
+        "id": "a0f09d4d-c5ea-4a2e-b2dd-592bcb73d025",
+        "text": "really bad",
+        "userName": "Rob",
+        "rating": 1,
+        "createdAt": 1593527210403
+    },
+    {
+        "id": "e9e28fe6-06f5-4cbb-a3ca-7b2b23ea28ec",
+        "text": "so good!",
+        "userName": "Matthew",
+        "rating": 5,
+        "createdAt": 1593527230021
+    },
+    {
+        "id": "4c45392f-83e3-40a8-bb8b-b0af107523cc",
+        "text": "",
+        "userName": "Tom",
+        "rating": 4,
+        "createdAt": 1593527260724
+    }
+]

@@ -22,6 +22,11 @@
 
 -   We want to be able to use all the latest javascript features and have it work across all modern browsers.
 
+### Local Storage
+
+-  We are persisting the review state in local storage, so we don't have to set up a db for the purpose of a demo.
+-  Local storage data is initialised with some mock reviews found in /mock/reviews.json
+
 ## Testing strategy
 
 -   mount page component and test the page as a user would interact with it - don't test internal component state.
@@ -48,3 +53,4 @@
     would need error messages for invalid inputs.
 -   Our data should be fetched from a permanent data source rather than localStorage.
 -   We could display the name along with the review in the list for a more personable experience.
+-   The page in general is pretty ugly!

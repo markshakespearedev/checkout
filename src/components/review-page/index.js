@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react';
 
-import styles from './container.css';
+import styles from './review-page.css';
 import ReviewForm from '../review-form';
 import ReviewList from '../review-list';
 import ReviewChart from '../review-chart';
 import useGetReviews from '../../hooks/use-get-reviews';
 
-const Container = () => {
+const ReviewPage = () => {
     const [savedReviewSuccess, setSavedReviewSuccess] = useState(false);
     const [reviews, setReviews] = useGetReviews();
 
@@ -48,4 +48,4 @@ const Container = () => {
     );
 };
 
-export default Container;
+export default ReviewPage;

@@ -5,7 +5,7 @@ import StarIcon from '../icons/star.svg';
 import styles from './rating-star.css';
 import { RATING_OPTIONS } from '../../lib/constants';
 
-const Rating = ({ rating, handleClickStar, isActive }) => (
+const RatingStar = ({ rating, handleClickStar, isActive }) => (
     <button
         data-test="rating-star"
         onClick={(e) => handleClickStar({ e, rating })}
@@ -16,10 +16,10 @@ const Rating = ({ rating, handleClickStar, isActive }) => (
     </button>
 );
 
-Rating.propTypes = {
+RatingStar.propTypes = {
     rating: PropTypes.oneOf(RATING_OPTIONS).isRequired,
     handleClickStar: PropTypes.func.isRequired,
     isActive: PropTypes.bool.isRequired,
 };
 
-export default Rating;
+export default RatingStar;

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-import styles from './page.css';
-import Container from '../container';
+import styles from './template.css';
+import ReviewPage from '../review-page';
 
-const Page = () => (
+const Template = () => (
     <Fragment>
         <header className={styles.header}>
             <a href="/" className={styles.logo}>
@@ -11,8 +11,8 @@ const Page = () => (
             </a>
         </header>
 
-        <Container />
+        <ReviewPage />
     </Fragment>
 );
 
-export default Page;
+export default Template;

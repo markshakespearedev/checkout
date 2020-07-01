@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Page from './components/page';
+import Template from './components/template';
 import './reset.css';
 import './styles.css';
 
-render(<Page />, document.getElementById('root'));
+render(<Template />, document.getElementById('root'));

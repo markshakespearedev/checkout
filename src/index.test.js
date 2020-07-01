@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Page from './components/page';
+import Page from './components/template';
 
 beforeEach(() => {
     localStorage.clear();
@@ -76,6 +76,23 @@ test('it should render an error message if the user submits the form without sel
     emailInput.simulate('change', { target: { value: 'Test Email' } });
     wrapper.find('button[type="submit"]').simulate('submit');
     expect(wrapper.find({ 'data-test': 'star-rating-error' })).toHaveLength(1);
+    expect(wrapper.find({ 'data-test': 'star-rating-error' }).text()).toEqual(
+        'Please enter a rating'
+    );
+});
+
+test('it should disable the review form button if the user has not entered a name / email', () => {
+    const wrapper = mount(<Page />);
+    expect(wrapper.find('button[type="submit"]').props().disabled).toEqual(
+        true
+    );
+    const nameInput = wrapper.find('input[name="name"]');
+    const emailInput = wrapper.find('input[name="email"]');
+    nameInput.simulate('change', { target: { value: 'Test Name' } });
+    emailInput.simulate('change', { target: { value: 'Test Email' } });
+    expect(wrapper.find('button[type="submit"]').props().disabled).toEqual(
+        false
+    );
 });
 
 test('it should render a review chart', () => {
@@ -133,14 +150,16 @@ test('it should update the chart when a new review is added', () => {
     createReview({ wrapper });
     const chartProps = wrapper.find('VictoryBar').props();
     expect(chartProps.data).toHaveLength(6);
-    expect(chartProps.data).toEqual(expect.arrayContaining([
-        {
-            id: expect.any(String),
-            text: 'Test Comment',
-            userName: 'Test Name',
-            rating: 3,
-            createdAt: expect.any(Number),
-            index: 6,
-        },
-    ]));
+    expect(chartProps.data).toEqual(
+        expect.arrayContaining([
+            {
+                id: expect.any(String),
+                text: 'Test Comment',
+                userName: 'Test Name',
+                rating: 3,
+                createdAt: expect.any(Number),
+                index: 6,
+            },
+        ])
+    );
 });
